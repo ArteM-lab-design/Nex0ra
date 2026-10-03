@@ -3,17 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexora: Головна</title>
+    <title>Nexora | Electrical Store</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h2 class="title-header"> Nexora</h2>
-    </header>
-    <main>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand-wrap">
+                <div class="brand-mark">N</div>
+                <h2 class="title-header">Nexora</h2>
+            </div>
 
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="#">Home</a>
+                <a href="#products">Products</a>
+                <a href="#cart">Basket</a>
+            </nav>
+
+            <div class="header-actions">
+                <div class="cart-pill" id="cart-summary">
+                    Basket <span id="cart-count">0</span>
+                </div>
+                <button id="signin-button" class="primary-button">Sign in</button>
+                <button id="signout-button" class="secondary-button hidden">Sign out</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container page-content">
+        <section class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow">Smart electronics</p>
+                <h1>Modern devices for everyday life</h1>
+                <p>
+                    Discover efficient, stylish, and reliable electrical devices designed to make your home and workspace smarter.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#products" class="primary-button">Shop now</a>
+                    <button id="hero-signin" class="secondary-button">Account</button>
+                </div>
+            </div>
+
+            <div class="hero-card">
+                <span class="card-label">Top seller</span>
+                <h3>Smart Home Kit</h3>
+                <p>Wireless lighting, security, and climate control in one convenient bundle.</p>
+                <strong>$349</strong>
+            </div>
+        </section>
+
+        <section id="products" class="catalog">
+            <div class="section-header">
+                <h3>Featured devices</h3>
+                <span id="user-status">Guest</span>
+            </div>
+            <div id="product-grid" class="product-grid"></div>
+        </section>
+
+        <aside id="cart" class="cart-panel">
+            <div class="section-header">
+                <h3>My basket</h3>
+            </div>
+            <ul id="cart-items" class="cart-items">
+                <li class="empty-cart">Your basket is empty.</li>
+            </ul>
+            <div class="total-row">
+                <span>Total</span>
+                <strong id="total-price">$0.00</strong>
+            </div>
+            <button id="checkout-button" class="checkout-button">Buy now</button>
+        </aside>
     </main>
-    <footer>
-        
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© 2026 Nexora</p>
+            <p>Electronics • Smart living • Support</p>
+        </div>
     </footer>
+
+    <div id="auth-modal" class="modal hidden" aria-hidden="true">
+        <div class="modal-content">
+            <button id="close-modal" class="close-modal" aria-label="Close sign in">×</button>
+            <h3>Sign in to Nexora</h3>
+            <form id="signin-form">
+                <label>
+                    Email
+                    <input id="email" type="email" placeholder="you@example.com" required>
+                </label>
+                <label>
+                    Password
+                    <input id="password" type="password" placeholder="Enter your password" required>
+                </label>
+                <button type="submit" class="primary-button full-width">Sign in</button>
+            </form>
+            <p class="demo-account">Demo account: demo@nexora.com / demo123</p>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
 </body>
 </html>
+
