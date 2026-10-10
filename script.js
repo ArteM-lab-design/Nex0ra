@@ -1,56 +1,170 @@
+
 const products = [
     {
         id: 1,
-        name: 'Smart Speaker Pro',
-        price: 99,
-        icon: '🔊',
-        description: 'Voice assistant, rich sound, smart home control.',
-        tag: 'Bestseller'
+        name: 'Apple iPhone 16',
+        brand: 'Apple',
+        price: 699,
+        icon: '📱',
+        description: '6.1-inch OLED display, A18 chip, 48 MP camera.',
+        tag: 'Popular',
+        category: 'Smartphones'
     },
     {
         id: 2,
-        name: 'Air Purifier Mini',
-        price: 149,
-        icon: '🌬️',
-        description: 'Compact purifier for bedrooms, offices, and small spaces.',
-        tag: 'New'
+        name: 'Samsung Galaxy S25 Ultra',
+        brand: 'Samsung',
+        price: 1199,
+        icon: '📱',
+        description: 'Premium Android smartphone with S Pen and advanced cameras.',
+        tag: 'Flagship',
+        category: 'Smartphones'
     },
     {
         id: 3,
-        name: 'Smart Lamp Plus',
-        price: 79,
-        icon: '💡',
-        description: 'Adjustable lighting with app control and motion detection.',
-        tag: 'Popular'
+        name: 'Xiaomi 15',
+        brand: 'Xiaomi',
+        price: 799,
+        icon: '📱',
+        description: 'Flagship performance, Leica cameras and AMOLED display.',
+        tag: 'Bestseller',
+        category: 'Smartphones'
     },
     {
         id: 4,
-        name: 'Portable Charger X',
-        price: 59,
-        icon: '🔋',
-        description: 'Fast charging power bank with USB-C and wireless support.',
-        tag: 'Top rated'
+        name: 'Apple iPhone 16 Pro',
+        brand: 'Apple',
+        price: 899,
+        icon: '📱',
+        description: 'ProMotion display, A18 Pro chip and advanced camera system.',
+        tag: 'Pro',
+        category: 'Smartphones'
     },
     {
         id: 5,
-        name: 'Wi-Fi Security Cam',
-        price: 179,
-        icon: '📷',
-        description: 'Motion alerts, night vision, and full HD live recording.',
-        tag: 'Secure'
+        name: 'Samsung Galaxy A56 5G',
+        brand: 'Samsung',
+        price: 399,
+        icon: '📱',
+        description: 'Super AMOLED display, 5G connectivity and versatile cameras.',
+        tag: 'Value pick',
+        category: 'Smartphones'
     },
     {
         id: 6,
-        name: 'Thermostat Smart',
+        name: 'Xiaomi Redmi Note 14 Pro 5G',
+        brand: 'Xiaomi',
+        price: 299,
+        icon: '📱',
+        description: 'AMOLED display, 200 MP main camera and fast charging.',
+        tag: 'Popular',
+        category: 'Smartphones'
+    },
+    {
+        id: 7,
+        name: 'Apple MacBook Air 13 M4',
+        brand: 'Apple',
+        price: 999,
+        icon: '💻',
+        description: 'Lightweight laptop with Apple M4 chip and Liquid Retina display.',
+        tag: 'Featured',
+        category: 'Laptops'
+    },
+    {
+        id: 8,
+        name: 'ASUS ROG Zephyrus G16',
+        brand: 'ASUS',
+        price: 1899,
+        icon: '💻',
+        description: 'Gaming laptop with high-refresh-rate display and dedicated graphics.',
+        tag: 'Gaming',
+        category: 'Laptops'
+    },
+    {
+        id: 9,
+        name: 'Lenovo Legion 5',
+        brand: 'Lenovo',
+        price: 1299,
+        icon: '💻',
+        description: 'Performance laptop designed for gaming and demanding applications.',
+        tag: 'Gaming',
+        category: 'Laptops'
+    },
+    {
+        id: 10,
+        name: 'Apple iPad Air M3',
+        brand: 'Apple',
+        price: 599,
+        icon: '📲',
+        description: 'Powerful tablet with Liquid Retina display and Apple Pencil support.',
+        tag: 'New',
+        category: 'Tablets'
+    },
+    {
+        id: 11,
+        name: 'Samsung Galaxy Tab S10+',
+        brand: 'Samsung',
+        price: 999,
+        icon: '📲',
+        description: 'Large AMOLED tablet with S Pen support and multitasking features.',
+        tag: 'Premium',
+        category: 'Tablets'
+    },
+    {
+        id: 12,
+        name: 'Xiaomi Pad 7',
+        brand: 'Xiaomi',
+        price: 399,
+        icon: '📲',
+        description: 'High-resolution display, powerful processor and productivity features.',
+        tag: 'Value pick',
+        category: 'Tablets'
+    },
+    {
+        id: 13,
+        name: 'Apple AirPods 4',
+        brand: 'Apple',
         price: 129,
-        icon: '🌡️',
-        description: 'Energy-saving temperature control for every room.',
-        tag: 'Eco'
+        icon: '🎧',
+        description: 'Wireless earbuds with spatial audio and USB-C charging case.',
+        tag: 'Popular',
+        category: 'Audio'
+    },
+    {
+        id: 14,
+        name: 'Sony WH-1000XM5',
+        brand: 'Sony',
+        price: 299,
+        icon: '🎧',
+        description: 'Over-ear wireless headphones with active noise cancellation.',
+        tag: 'Bestseller',
+        category: 'Audio'
+    },
+    {
+        id: 15,
+        name: 'Samsung Galaxy Watch7',
+        brand: 'Samsung',
+        price: 249,
+        icon: '⌚',
+        description: 'Smartwatch with fitness tracking and health monitoring features.',
+        tag: 'Smart choice',
+        category: 'Wearables'
+    },
+    {
+        id: 16,
+        name: 'Apple Watch Series 10',
+        brand: 'Apple',
+        price: 399,
+        icon: '⌚',
+        description: 'Slim smartwatch with fitness tracking and an Always-On Retina display.',
+        tag: 'Premium',
+        category: 'Wearables'
     }
 ];
 
+
 const state = {
-    cart: [],
+    cart: JSON.parse(localStorage.getItem('nexora-cart') || '[]'),
     user: JSON.parse(localStorage.getItem('nexora-user') || 'null')
 };
 
@@ -77,14 +191,18 @@ function formatPrice(value) {
 function renderProducts() {
     productGrid.innerHTML = products.map((product) => `
         <article class="product-card">
-            <div class="product-image" aria-label="${product.name}">${product.icon}</div>
-            <div class="product-info">
-                <h4>${product.name}</h4>
-                <span class="product-price">${formatPrice(product.price)}</span>
-            </div>
-            <p>${product.description}</p>
+            <a class="product-card-link" href="product.html?id=${product.id}">
+                <div class="product-image" aria-label="${product.name}">${product.icon}</div>
+                <div class="product-info">
+                    <h4>${product.name}</h4>
+                    <span class="product-price">${formatPrice(product.price)}</span>
+                </div>
+                <p>${product.description}</p>
+                <div class="product-meta">
+                    <span class="product-tag">${product.tag}</span>
+                </div>
+            </a>
             <div class="product-meta">
-                <span class="product-tag">${product.tag}</span>
                 <button class="buy-button" data-product-id="${product.id}">Buy</button>
             </div>
         </article>
@@ -113,7 +231,7 @@ function addToCart(productId) {
     } else {
         state.cart.push({ ...product, quantity: 1 });
     }
-
+    localStorage.setItem('nexora-cart', JSON.stringify(state.cart));
     renderCart();
 }
 
@@ -122,19 +240,41 @@ function renderCart() {
         cartItems.innerHTML = '<li class="empty-cart">Your basket is empty.</li>';
         cartCount.textContent = '0';
         totalPrice.textContent = '$0.00';
+        localStorage.setItem('nexora-cart', JSON.stringify(state.cart));
         return;
     }
 
     cartItems.innerHTML = state.cart.map((item) => `
-        <li>
-            <span>${item.name} × ${item.quantity}</span>
-            <strong>${formatPrice(item.price * item.quantity)}</strong>
+        <li class="cart-item">
+            <div class="cart-item-info">
+                <span>${item.name} × ${item.quantity}</span>
+                <strong>${formatPrice(item.price * item.quantity)}</strong>
+            </div>
+            <button
+                class="cart-remove-button"
+                data-remove-id="${item.id}"
+                aria-label="Remove ${item.name}"
+                title="Remove product"
+            >×</button>
         </li>
     `).join('');
 
     const total = state.cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-    cartCount.textContent = String(state.cart.reduce((sum, item) => sum + item.quantity, 0));
+
+    cartCount.textContent = String(
+        state.cart.reduce((sum, item) => sum + item.quantity, 0)
+    );
+
     totalPrice.textContent = formatPrice(total);
+    localStorage.setItem('nexora-cart', JSON.stringify(state.cart));
+
+    document.querySelectorAll('.cart-remove-button').forEach((button) => {
+        button.addEventListener('click', () => {
+            const productId = Number(button.dataset.removeId);
+            state.cart = state.cart.filter((item) => item.id !== productId);
+            renderCart();
+        });
+    });
 }
 
 function updateHeader() {
@@ -205,7 +345,8 @@ function handleCheckout() {
     const orderTotal = state.cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
     alert(`Thank you for your purchase, ${state.user.email}! Your total is ${formatPrice(orderTotal)}.`);
     state.cart = [];
-    renderCart();
+localStorage.setItem('nexora-cart', JSON.stringify(state.cart));
+renderCart();
 }
 
 signinButton.addEventListener('click', openModal);
@@ -223,3 +364,21 @@ renderProducts();
 renderCart();
 updateHeader();
 
+const themeButton = document.querySelector("#theme-button");
+
+function applyTheme(theme) {
+    document.body.classList.toggle("dark-theme", theme === "dark");
+    themeButton.textContent = theme === "dark" ? "☀️" : "🌙";
+    localStorage.setItem("theme", theme);
+}
+
+const savedTheme = localStorage.getItem("theme") || "light";
+applyTheme(savedTheme);
+
+themeButton.addEventListener("click", () => {
+    const newTheme = document.body.classList.contains("dark-theme")
+        ? "light"
+        : "dark";
+
+    applyTheme(newTheme);
+});
