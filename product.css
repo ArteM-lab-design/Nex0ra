@@ -233,3 +233,38 @@ body.dark-theme .product-preview::after {
         animation: none;
     }
 }
+.product-preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    padding: 30px;
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.product-preview-image {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    height: 360px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.product-preview:hover .product-preview-image {
+    transform: scale(1.04);
+}
+
+@media (max-width: 600px) {
+    .product-preview {
+        min-height: 280px;
+        padding: 16px;
+    }
+
+    .product-preview-image {
+        height: 250px;
+    }
+}

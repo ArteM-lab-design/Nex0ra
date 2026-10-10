@@ -1092,3 +1092,26 @@ body.dark-theme #signin-form input {
     background: #e5484d;
     color: white;
 }
+.product-image {
+    width: 100%;
+    height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: #ffffff;
+    border-radius: 14px;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.25s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}

@@ -16,7 +16,12 @@ if (!product) {
     details.innerHTML = `
         <div class="product-details">
             <div class="product-preview">
-                <span class="product-preview-icon">${product.icon}</span>
+                <img
+                    class="product-preview-image"
+                    src="${product.image}"
+                    alt="${product.name}"
+                    onerror="this.style.display='none'"
+                >
             </div>
 
             <div class="product-information">
