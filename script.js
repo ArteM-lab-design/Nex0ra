@@ -1,23 +1,21 @@
-
 const products = [
     { id: 1, name: 'Apple iPhone 16', brand: 'Apple', price: 699, image: 'images/iphone-16.webp', description: '6.1-inch OLED display, A18 chip, 48 MP camera.', tag: 'Popular', category: 'Smartphones' },
     { id: 2, name: 'Samsung Galaxy S25 Ultra', brand: 'Samsung', price: 1199, image: 'images/samsung-s25-ultra.jpg', description: 'Premium Android smartphone with S Pen and advanced cameras.', tag: 'Flagship', category: 'Smartphones' },
     { id: 3, name: 'Xiaomi 15', brand: 'Xiaomi', price: 799, image: 'images/xiaomi-15.webp', description: 'Flagship performance, Leica cameras and AMOLED display.', tag: 'Bestseller', category: 'Smartphones' },
     { id: 4, name: 'Apple iPhone 16 Pro', brand: 'Apple', price: 899, image: 'images/iphone-16-pro.webp', description: 'ProMotion display, A18 Pro chip and advanced camera system.', tag: 'Pro', category: 'Smartphones' },
-    { id: 5, name: 'Samsung Galaxy A56 5G', brand: 'Samsung', price: 399, image: 'images/samsung-a56.jpg', description: 'Super AMOLED display, 5G connectivity and versatile cameras.', tag: 'Value pick', category: 'Smartphones' },
-    { id: 6, name: 'Xiaomi Redmi Note 14 Pro 5G', brand: 'Xiaomi', price: 299, image: 'images/redmi-note-14-pro-5g.jpg', description: 'AMOLED display, 200 MP main camera and fast charging.', tag: 'Popular', category: 'Smartphones' },
-    { id: 7, name: 'Apple MacBook Air 13 M4', brand: 'Apple', price: 999, image: 'images/macbook-air-m4.jpg', description: 'Lightweight laptop with Apple M4 chip and Liquid Retina display.', tag: 'Featured', category: 'Laptops' },
-    { id: 8, name: 'ASUS ROG Zephyrus G16', brand: 'ASUS', price: 1899, image: 'images/asus-rog-zephyrus-g16.jpg', description: 'Gaming laptop with high-refresh-rate display and dedicated graphics.', tag: 'Gaming', category: 'Laptops' },
-    { id: 9, name: 'Lenovo Legion 5', brand: 'Lenovo', price: 1299, image: 'images/lenovo-legion-5.jpg', description: 'Performance laptop designed for gaming and demanding applications.', tag: 'Gaming', category: 'Laptops' },
-    { id: 10, name: 'Apple iPad Air M3', brand: 'Apple', price: 599, image: 'images/ipad-air-m3.jpg', description: 'Powerful tablet with Liquid Retina display and Apple Pencil support.', tag: 'New', category: 'Tablets' },
-    { id: 11, name: 'Samsung Galaxy Tab S10+', brand: 'Samsung', price: 999, image: 'images/samsung-tab-s10-plus.jpg', description: 'Large AMOLED tablet with S Pen support and multitasking features.', tag: 'Premium', category: 'Tablets' },
-    { id: 12, name: 'Xiaomi Pad 7', brand: 'Xiaomi', price: 399, image: 'images/xiaomi-pad-7.jpg', description: 'High-resolution display, powerful processor and productivity features.', tag: 'Value pick', category: 'Tablets' },
-    { id: 13, name: 'Apple AirPods 4', brand: 'Apple', price: 129, image: 'images/airpods-4.jpg', description: 'Wireless earbuds with spatial audio and USB-C charging case.', tag: 'Popular', category: 'Audio' },
+    { id: 5, name: 'Samsung Galaxy A56 5G', brand: 'Samsung', price: 399, image: 'images/samsung-a56.webp', description: 'Super AMOLED display, 5G connectivity and versatile cameras.', tag: 'Value pick', category: 'Smartphones' },
+    { id: 6, name: 'Xiaomi Redmi Note 14 Pro 5G', brand: 'Xiaomi', price: 299, image: 'images/redmi-note-14-pro-5g.webp', description: 'AMOLED display, 200 MP main camera and fast charging.', tag: 'Popular', category: 'Smartphones' },
+    { id: 7, name: 'Apple MacBook Air 13 M4', brand: 'Apple', price: 999, image: 'images/macbook-air-m4.jpeg', description: 'Lightweight laptop with Apple M4 chip and Liquid Retina display.', tag: 'Featured', category: 'Laptops' },
+    { id: 8, name: 'ASUS ROG Zephyrus G16', brand: 'ASUS', price: 1899, image: 'images/asus-rog-zephyrus-g16.webp', description: 'Gaming laptop with high-refresh-rate display and dedicated graphics.', tag: 'Gaming', category: 'Laptops' },
+    { id: 9, name: 'Lenovo Legion 5', brand: 'Lenovo', price: 1299, image: 'images/lenovo-legion-5.webp', description: 'Performance laptop designed for gaming and demanding applications.', tag: 'Gaming', category: 'Laptops' },
+    { id: 10, name: 'Apple iPad Air M3', brand: 'Apple', price: 599, image: 'images/ipad-air-m3.webp', description: 'Powerful tablet with Liquid Retina display and Apple Pencil support.', tag: 'New', category: 'Tablets' },
+    { id: 11, name: 'Samsung Galaxy Tab S10+', brand: 'Samsung', price: 999, image: 'images/samsung-tab-s10-plus.webp', description: 'Large AMOLED tablet with S Pen support and multitasking features.', tag: 'Premium', category: 'Tablets' },
+    { id: 12, name: 'Xiaomi Pad 7', brand: 'Xiaomi', price: 399, image: 'images/xiaomi-pad-7.webp', description: 'High-resolution display, powerful processor and productivity features.', tag: 'Value pick', category: 'Tablets' },
+    { id: 13, name: 'Apple AirPods 4', brand: 'Apple', price: 129, image: 'images/airpods-4.webp', description: 'Wireless earbuds with spatial audio and USB-C charging case.', tag: 'Popular', category: 'Audio' },
     { id: 14, name: 'Sony WH-1000XM5', brand: 'Sony', price: 299, image: 'images/sony-wh-1000xm5.jpg', description: 'Over-ear wireless headphones with active noise cancellation.', tag: 'Bestseller', category: 'Audio' },
     { id: 15, name: 'Samsung Galaxy Watch7', brand: 'Samsung', price: 249, image: 'images/samsung-galaxy-watch7.jpg', description: 'Smartwatch with fitness tracking and health monitoring features.', tag: 'Smart choice', category: 'Wearables' },
-    { id: 16, name: 'Apple Watch Series 10', brand: 'Apple', price: 399, image: 'images/apple-watch-series-10.jpg', description: 'Slim smartwatch with fitness tracking and an Always-On Retina display.', tag: 'Premium', category: 'Wearables' }
+    { id: 16, name: 'Apple Watch Series 10', brand: 'Apple', price: 399, image: 'images/apple-watch-series-10.webp', description: 'Slim smartwatch with fitness tracking and an Always-On Retina display.', tag: 'Premium', category: 'Wearables' }
 ];
-
 
 const state = {
     cart: JSON.parse(localStorage.getItem('nexora-cart') || '[]'),
@@ -36,6 +34,12 @@ const closeModal = document.getElementById('close-modal');
 const signinForm = document.getElementById('signin-form');
 const checkoutButton = document.getElementById('checkout-button');
 const heroSignin = document.getElementById('hero-signin');
+const themeButton = document.getElementById('theme-button');
+
+const productSearch = document.getElementById('product-search');
+const clearSearch = document.getElementById('clear-search');
+const searchResultCount = document.getElementById('search-result-count');
+const noProducts = document.getElementById('no-products');
 
 function formatPrice(value) {
     return new Intl.NumberFormat('en-US', {
@@ -44,104 +48,321 @@ function formatPrice(value) {
     }).format(value);
 }
 
-function renderProducts() {
-    productGrid.innerHTML = products.map((product) => `
+function escapeHTML(value) {
+    return String(value).replace(/[&<>"']/g, character => ({
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#39;'
+    })[character]);
+}
+
+function renderProducts(items = products) {
+    if (!productGrid) return;
+
+    productGrid.innerHTML = items.map(product => `
         <article class="product-card">
             <a class="product-card-link" href="product.html?id=${product.id}">
                 <div class="product-image">
                     <img
-                        src="${product.image}"
-                        alt="${product.name}"
+                        src="${escapeHTML(product.image)}"
+                        alt="${escapeHTML(product.name)}"
                         loading="lazy"
-                        onerror="this.style.display='none'"
+                        data-product-image="${product.id}"
                     >
                 </div>
+
                 <div class="product-info">
-                    <h4>${product.name}</h4>
+                    <h4>${escapeHTML(product.name)}</h4>
                     <span class="product-price">${formatPrice(product.price)}</span>
                 </div>
-                <p>${product.description}</p>
+
+                <p>${escapeHTML(product.description)}</p>
+
                 <div class="product-meta">
-                    <span class="product-tag">${product.tag}</span>
+                    <span class="product-tag">${escapeHTML(product.tag)}</span>
                 </div>
             </a>
+
             <div class="product-meta">
-                <button class="buy-button" data-product-id="${product.id}">Buy</button>
+                <button
+                    class="buy-button"
+                    type="button"
+                    data-product-id="${product.id}"
+                >Buy</button>
             </div>
         </article>
     `).join('');
 
-    document.querySelectorAll('.buy-button').forEach((button) => {
+    productGrid.querySelectorAll('.buy-button').forEach(button => {
         button.addEventListener('click', () => {
             addToCart(Number(button.dataset.productId));
         });
     });
+
+    productGrid.querySelectorAll('[data-product-image]').forEach(img => {
+        img.addEventListener('error', () => {
+            if (img.dataset.fallbackApplied === 'true') return;
+
+            img.dataset.fallbackApplied = 'true';
+            img.alt = `${img.alt} — image unavailable`;
+
+            const fallback = document.createElement('div');
+            fallback.className = 'product-image-fallback';
+            fallback.setAttribute('aria-label', 'Product image unavailable');
+            fallback.textContent = '▧';
+
+            img.replaceWith(fallback);
+        }, { once: true });
+    });
 }
+
+function searchProducts() {
+    if (!productSearch) return;
+
+    const query = productSearch.value.trim().toLowerCase();
+
+    const filteredProducts = products.filter(product => {
+        const searchableText = [
+            product.name,
+            product.brand,
+            product.category,
+            product.description,
+            product.tag
+        ].join(' ').toLowerCase();
+
+        return searchableText.includes(query);
+    });
+
+    renderProducts(filteredProducts);
+
+    if (clearSearch) {
+        clearSearch.classList.toggle('hidden', query.length === 0);
+    }
+
+    if (searchResultCount) {
+        searchResultCount.textContent = query
+            ? `${filteredProducts.length} ${filteredProducts.length === 1 ? 'product' : 'products'} found`
+            : '';
+    }
+
+    if (noProducts) {
+        noProducts.classList.toggle('hidden', filteredProducts.length !== 0);
+    }
+
+    if (productGrid) {
+        productGrid.classList.toggle('hidden', filteredProducts.length === 0);
+    }
+}
+
+if (productSearch) {
+    productSearch.addEventListener('input', searchProducts);
+}
+
+if (clearSearch) {
+    clearSearch.addEventListener('click', () => {
+        if (!productSearch) return;
+
+        productSearch.value = '';
+        searchProducts();
+        productSearch.focus();
+    });
+}
+
 function addToCart(productId) {
     if (!state.user) {
         openModal();
         return;
     }
 
-    const product = products.find((item) => item.id === productId);
+    const product = products.find(item => item.id === productId);
     if (!product) return;
 
-    const existing = state.cart.find((item) => item.id === product.id);
+    const existing = state.cart.find(item => item.id === product.id);
 
     if (existing) {
         existing.quantity += 1;
     } else {
         state.cart.push({ ...product, quantity: 1 });
     }
+
     localStorage.setItem('nexora-cart', JSON.stringify(state.cart));
     renderCart();
 }
 
+
 function renderCart() {
+    if (!cartItems) return;
+
+    state.cart = state.cart
+        .filter(item => products.some(product => product.id === Number(item.id)))
+        .map(item => ({
+            ...products.find(product => product.id === Number(item.id)),
+            quantity: Math.max(1, Math.floor(Number(item.quantity) || 1))
+        }));
+
+    const count = state.cart.reduce((sum, item) => sum + item.quantity, 0);
+    const total = state.cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+    const isCartPage = cartItems.classList.contains('cart-page-items');
+
+    if (cartCount) {
+        cartCount.textContent = String(count);
+    }
+
+    if (totalPrice) {
+        totalPrice.textContent = formatPrice(total);
+    }
+
+    const summaryItemCount = document.getElementById('summary-item-count');
+    const summarySubtotal = document.getElementById('summary-subtotal');
+
+    if (summaryItemCount) {
+        summaryItemCount.textContent = String(count);
+    }
+
+    if (summarySubtotal) {
+        summarySubtotal.textContent = formatPrice(total);
+    }
+
     if (state.cart.length === 0) {
-        cartItems.innerHTML = '<li class="empty-cart">Your basket is empty.</li>';
-        cartCount.textContent = '0';
-        totalPrice.textContent = '$0.00';
+        cartItems.innerHTML = `
+            <li class="empty-cart">
+                Your basket is empty.
+                <a href="index.html#products" class="back-to-products">Browse products</a>
+            </li>
+        `;
+
+        if (isCartPage) {
+            const clearButton = document.getElementById('clear-cart-button');
+
+            if (clearButton) {
+                clearButton.disabled = true;
+            }
+        }
+
         localStorage.setItem('nexora-cart', JSON.stringify(state.cart));
         return;
     }
 
-    cartItems.innerHTML = state.cart.map((item) => `
-        <li class="cart-item">
-            <div class="cart-item-info">
-                <span>${item.name} × ${item.quantity}</span>
-                <strong>${formatPrice(item.price * item.quantity)}</strong>
-            </div>
-            <button
-                class="cart-remove-button"
-                data-remove-id="${item.id}"
-                aria-label="Remove ${item.name}"
-                title="Remove product"
-            >×</button>
-        </li>
-    `).join('');
+    const clearButton = document.getElementById('clear-cart-button');
 
-    const total = state.cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+    if (clearButton) {
+        clearButton.disabled = false;
+    }
 
-    cartCount.textContent = String(
-        state.cart.reduce((sum, item) => sum + item.quantity, 0)
-    );
+    if (isCartPage) {
+        cartItems.innerHTML = state.cart.map(item => `
+            <li class="cart-page-item">
+                <a class="cart-page-product-image" href="product.html?id=${item.id}" aria-label="${escapeHTML(item.name)}">
+                    <img
+                        src="${escapeHTML(item.image)}"
+                        alt="${escapeHTML(item.name)}"
+                        loading="lazy"
+                    >
+                </a>
 
-    totalPrice.textContent = formatPrice(total);
-    localStorage.setItem('nexora-cart', JSON.stringify(state.cart));
+                <div class="cart-page-product-details">
+                    <a href="product.html?id=${item.id}">${escapeHTML(item.name)}</a>
+                    <span class="cart-product-brand">${escapeHTML(item.brand)} · ${escapeHTML(item.category)}</span>
+                    <span class="cart-line-price">${formatPrice(item.price)} each</span>
 
-    document.querySelectorAll('.cart-remove-button').forEach((button) => {
+                    <div class="cart-page-controls">
+                        <div class="quantity-control">
+                            <button
+                                type="button"
+                                data-quantity-change="-1"
+                                data-product-id="${item.id}"
+                                aria-label="Decrease quantity"
+                            >−</button>
+
+                            <span>${item.quantity}</span>
+
+                            <button
+                                type="button"
+                                data-quantity-change="1"
+                                data-product-id="${item.id}"
+                                aria-label="Increase quantity"
+                            >+</button>
+                        </div>
+
+                        <button
+                            class="cart-remove-button"
+                            type="button"
+                            data-remove-id="${item.id}"
+                            aria-label="Remove ${escapeHTML(item.name)}"
+                            title="Remove product"
+                        >×</button>
+                    </div>
+                </div>
+
+                <strong class="cart-page-item-total">${formatPrice(item.price * item.quantity)}</strong>
+            </li>
+        `).join('');
+
+        cartItems.querySelectorAll('[data-quantity-change]').forEach(button => {
+            button.addEventListener('click', () => {
+                const productId = Number(button.dataset.productId);
+                const change = Number(button.dataset.quantityChange);
+                const item = state.cart.find(product => product.id === productId);
+
+                if (!item) return;
+
+                item.quantity = Math.max(1, item.quantity + change);
+
+                localStorage.setItem('nexora-cart', JSON.stringify(state.cart));
+                renderCart();
+            });
+        });
+    } else {
+        cartItems.innerHTML = state.cart.map(item => `
+            <li class="cart-item">
+                <div class="cart-item-info">
+                    <span>${escapeHTML(item.name)} × ${item.quantity}</span>
+                    <strong>${formatPrice(item.price * item.quantity)}</strong>
+                </div>
+
+                <button
+                    class="cart-remove-button"
+                    type="button"
+                    data-remove-id="${item.id}"
+                    aria-label="Remove ${escapeHTML(item.name)}"
+                    title="Remove product"
+                >×</button>
+            </li>
+        `).join('');
+    }
+
+    cartItems.querySelectorAll('.cart-remove-button').forEach(button => {
         button.addEventListener('click', () => {
             const productId = Number(button.dataset.removeId);
-            state.cart = state.cart.filter((item) => item.id !== productId);
+
+            state.cart = state.cart.filter(item => item.id !== productId);
+
+            localStorage.setItem('nexora-cart', JSON.stringify(state.cart));
             renderCart();
         });
     });
+
+    cartItems.querySelectorAll('.cart-page-product-image img').forEach(img => {
+        img.addEventListener('error', () => {
+            const container = img.closest('.cart-page-product-image');
+
+            if (container) {
+                container.textContent = '▧';
+                container.setAttribute('aria-label', 'Product image unavailable');
+            }
+        }, { once: true });
+    });
+
+    localStorage.setItem('nexora-cart', JSON.stringify(state.cart));
 }
+
 
 function updateHeader() {
     if (state.user) {
         const profileName = state.user.email.split('@')[0];
+
         userStatus.textContent = `Signed in as ${profileName}`;
         signinButton.classList.add('hidden');
         signoutButton.classList.remove('hidden');
@@ -165,8 +386,8 @@ function closeAuthModal() {
 function handleSignIn(event) {
     event.preventDefault();
 
-    const email = document.getElementById('email').value.trim();
-    const password = document.getElementById('password').value.trim();
+    const email = document.getElementById('email').value.trim().toLowerCase();
+    const password = document.getElementById('password').value;
 
     const validUsers = {
         'demo@nexora.com': 'demo123',
@@ -176,7 +397,9 @@ function handleSignIn(event) {
 
     if (validUsers[email] && validUsers[email] === password) {
         state.user = { email };
+
         localStorage.setItem('nexora-user', JSON.stringify(state.user));
+
         updateHeader();
         signinForm.reset();
         closeAuthModal();
@@ -188,9 +411,10 @@ function handleSignIn(event) {
 
 function signOut() {
     state.user = null;
+
     localStorage.removeItem('nexora-user');
+
     updateHeader();
-    renderCart();
 }
 
 function handleCheckout() {
@@ -204,43 +428,104 @@ function handleCheckout() {
         return;
     }
 
-    const orderTotal = state.cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-    alert(`Thank you for your purchase, ${state.user.email}! Your total is ${formatPrice(orderTotal)}.`);
+    const orderTotal = state.cart.reduce(
+        (sum, item) => sum + item.price * item.quantity,
+        0
+    );
+
+    alert(
+        `Thank you for your purchase, ${state.user.email}! Your total is ${formatPrice(orderTotal)}.`
+    );
+
     state.cart = [];
-localStorage.setItem('nexora-cart', JSON.stringify(state.cart));
-renderCart();
+
+    localStorage.setItem('nexora-cart', JSON.stringify(state.cart));
+
+    renderCart();
 }
 
-signinButton.addEventListener('click', openModal);
-heroSignin.addEventListener('click', openModal);
-closeModal.addEventListener('click', closeAuthModal);
-modal.addEventListener('click', (event) => {
-    if (event.target === modal) closeAuthModal();
+if (signinButton) {
+    signinButton.addEventListener('click', openModal);
+}
+
+if (heroSignin) {
+    heroSignin.addEventListener('click', openModal);
+}
+
+if (closeModal) {
+    closeModal.addEventListener('click', closeAuthModal);
+}
+
+if (modal) {
+    modal.addEventListener('click', event => {
+        if (event.target === modal) {
+            closeAuthModal();
+        }
+    });
+}
+
+document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && modal && !modal.classList.contains('hidden')) {
+        closeAuthModal();
+    }
 });
 
-signoutButton.addEventListener('click', signOut);
-signinForm.addEventListener('submit', handleSignIn);
-checkoutButton.addEventListener('click', handleCheckout);
+if (signoutButton) {
+    signoutButton.addEventListener('click', signOut);
+}
+
+if (signinForm) {
+    signinForm.addEventListener('submit', handleSignIn);
+}
+
+if (checkoutButton) {
+    checkoutButton.addEventListener('click', handleCheckout);
+}
+
+function applyTheme(theme) {
+    document.body.classList.toggle('dark-theme', theme === 'dark');
+
+    if (themeButton) {
+        themeButton.textContent = theme === 'dark' ? '☀️' : '🌙';
+        themeButton.setAttribute(
+            'aria-label',
+            theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'
+        );
+    }
+
+    localStorage.setItem('theme', theme);
+}
+
+const savedTheme = localStorage.getItem('theme') || 'light';
+
+applyTheme(savedTheme);
+
+if (themeButton) {
+    themeButton.addEventListener('click', () => {
+        const newTheme = document.body.classList.contains('dark-theme')
+            ? 'light'
+            : 'dark';
+
+        applyTheme(newTheme);
+    });
+}
+
+const clearCartButton = document.getElementById('clear-cart-button');
+
+if (clearCartButton) {
+    clearCartButton.addEventListener('click', () => {
+        if (state.cart.length === 0) return;
+
+        if (!confirm('Are you sure you want to clear your basket?')) return;
+
+        state.cart = [];
+        localStorage.setItem('nexora-cart', JSON.stringify(state.cart));
+        renderCart();
+    });
+}
+
 
 renderProducts();
 renderCart();
 updateHeader();
-
-const themeButton = document.querySelector("#theme-button");
-
-function applyTheme(theme) {
-    document.body.classList.toggle("dark-theme", theme === "dark");
-    themeButton.textContent = theme === "dark" ? "☀️" : "🌙";
-    localStorage.setItem("theme", theme);
-}
-
-const savedTheme = localStorage.getItem("theme") || "light";
-applyTheme(savedTheme);
-
-themeButton.addEventListener("click", () => {
-    const newTheme = document.body.classList.contains("dark-theme")
-        ? "light"
-        : "dark";
-
-    applyTheme(newTheme);
-});
+searchProducts();
